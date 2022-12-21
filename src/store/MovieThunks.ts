@@ -1,10 +1,11 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import AxiosApi from "../axios-api";
+import {responseApiItem} from "../types";
 
-export  const fetchMovies = createAsyncThunk<void, string>(
-	'movies/fetchAll',
-	async (searching) =>{
-		const MovieResponse = await AxiosApi.get('searching')
-		return MovieResponse.data
-	}
+export  const fetchMovie = createAsyncThunk<responseApiItem[], string>(
+    'movie/fetchSearchOneMovie',
+    async (arg) =>{
+        const MovieResponse = await AxiosApi.get<responseApiItem[]>('show/'  + arg);
+        return MovieResponse.data
+    }
 )
