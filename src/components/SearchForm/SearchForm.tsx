@@ -47,7 +47,8 @@ const SearchForm = () => {
 						}}
 						options={Movies.movie.map((option: OptionProps) => option.show.name)}
 						renderInput={(params) => <TextField {...params} label="Search"/>}/>
-					<button disabled={Movies.loading} className='btn btn-outline-dark col-1' type='submit'>{Movies.loading? <Spinner/>:'Search'}</button>
+					<button disabled={Movies.loading} className='btn btn-outline-dark col-1'
+							type='submit'>{Movies.loading ? <Spinner/> : 'Search'}</button>
 				</div>
 			</form>
 

@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {RootState} from "./store";
-import { responseMovie} from "../types";
+import {responseMovie} from "../types";
 import {fetchMovie} from "./MovieThunks";
 
 interface StateMovie {
@@ -9,14 +9,14 @@ interface StateMovie {
 }
 
 const initialState: StateMovie = {
-	oneMovie:  {
-		id : '',
+	oneMovie: {
+		id: '',
 		name: '',
 		genres: [],
 		language: '',
 		summary: '',
-		image:{medium:''},
-		}
+		image: {medium: ''},
+	}
 	,
 	loading: true
 }
