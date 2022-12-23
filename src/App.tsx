@@ -2,7 +2,7 @@ import React from 'react';
 import SearchForm from "./components/SearchForm/SearchForm";
 import {Route, Routes} from "react-router-dom";
 import Home from "./containers/Home/Home";
-import Movie from "./components/Movie/Movie";
+import Description from "./containers/Description/Description";
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
             <SearchForm/>
             <Routes>
                 <Route path='/' element={<Home/>}/>
-                <Route path='/shows/:id' element={<Movie/>}/>
+                <Route path='/shows/:id' element={<Description/>}/>
             </Routes>
         </div>
     );
